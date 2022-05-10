@@ -1,0 +1,56 @@
+/* Background */
+/*body {
+  background-image: url(../images/pexels-photo-807598.jpeg);
+  background-repeat: no-repeat;
+  background-size: 1000px;
+  
+}*/
+body {
+  background-image: linear-gradient(#4f387a, #9968d8);
+  background-repeat: no-repeat;
+  height: 750px;
+
+}
+
+/* Criando estilos internos na nossa página em CSS--> */
+/* criando o contexto de estilo nativo */
+h1 {
+    font-size: 18px;
+    color: rgb(199, 181, 216);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+/* Criando um estilo de classe */
+.cab_especial {
+    background-color: rgb(238, 204, 238);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 16px;
+    font-weight: bolder;
+    color: rgb(158, 70, 151);
+}
+
+.formatacao_campos {
+    background-color: rgb(240, 240, 240);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 16px;
+    font-weight: bolder;
+    color: rgb(85, 3, 78);
+}
+
+/* Criando um estilo de id */
+#cadastro {
+    color: rgb(120, 19, 214);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 14px;
+} 
+
+/* Criando um padrão de tamanho para os campos do formulário */ 
+.campo_nome {
+  width: 200px;
+  background-color: white;
+}
+
+.campo_email {
+  width: 200px;
+  background-color: white;
+}

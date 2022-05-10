@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/styles.css" />
+    <title>Gama Academy</title>
+  </head>
+  <body>
+    <!-- Colocar palavras chaves do seu negócio nas tags de cabeçalho <h> -->
+    <h1>Formulário de Cadastro de Alunos</h1>
+
+    <h1 class="cab_especial">Conheça todos os nossos cursos</h1>
+
+    <!-- Criando um formulário -->
+    <form id="cadastro" method="post">
+      <label>Nome Aluno:</label>
+      <input
+        type="text"
+        name="nome_aluno"
+        class="campo_nome"
+        placeholder="Digite seu nome aqui!"
+        required
+        oninvalid="this.setCustomValidity('Este campo é obrigatório! Você deve preenchê-lo.')"
+        onchange="try{setCustomValidity('')}catch(e){}"
+      /><br /><br />
+      <label>Email Aluno:</label>
+      <input
+        type="email"
+        name="email_aluno"
+        class="campo_email"
+        placeholder="Digite seu e-mail aqui!"
+        required
+        oninvalid="this.setCustomValidity('Este campo é obrigatório! Você deve preenchê-lo.')"
+        onchange="try{setCustomValidity('')}catch(e){}"
+      />
+      <br /><br />
+      <input type="submit" value="Enviar!" />
+    </form>
+  </body>
+</html>
