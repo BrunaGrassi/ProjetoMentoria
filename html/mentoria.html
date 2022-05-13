@@ -8,14 +8,104 @@
 
     <!-- Criando um processo em JavaScript -->
     <script>
-      alert('Olá seja bem vindo')
+      /* alert('Olá seja bem vindo')
       alert('E aí, topas aprender JavaScript?')
       alert(
-        'Poxa, estou digitando com aspas duplas e ponto e virgula no final, mas quando eu salvo o vscode substitui por aspas simples e tira o ponto e virgula'
-      )
+        "Poxa, estou digitando com aspas duplas e ponto e virgula no final, mas quando eu salvo o vscode substitui por aspas simples e tira o ponto e virgula"
+      ) */
+
+      
+      //var nome = prompt("Olá seja bem vindo(a)! Qual é o seu nome?","Digite o seu nome por favor");
+      //alert("Seja bem vindo(a) " + nome);
+
+      // Criando nossa primeira função em JavaScript
+      function mensagem(){
+        alert("Oi, você é beeeeem curioso(a) né?! kkk");
+      }
+      
+      function validacao(){
+        var nome  = form_cad.nome_usuario.value;
+        var email = form_cad.email_usuario.value;
+        var senha = form_cad.senha_usuario.value;
+        var conf_senha = form_cad.conf_senha_usuario.value;
+
+
+        //alert(nome);
+        //Validação do campo nome
+        if(nome==""){
+            alert("Por favor, preencha o campo NOME");
+            form_cad.nome_usuario.focus();
+            return false;
+        }
+        //Validação do campo email
+        if(email=="" || email.indexOf('@')==-1){
+            alert("Por favor, preencha o campo EMAIL");
+            form_cad.email_usuario.focus();
+            return false;
+        }
+
+        //Fazendo a validação dos campos de senha em JavaScript
+        if(senha==""){
+            alert("Por favor, preencha o campo SENHA");
+            form_cad.senha_usuario.focus();
+            return false;
+        }
+
+        if(conf_senha_usuario != senha){
+            alert("Os campos de SENHA precisam ser iguais");
+            form_cad.conf_senha_usuario.focus();
+            return false;
+
+        }else if(conf_senha_usuario==""){
+            alert("Por favor, preencha o campo CONFIRMAR SENHA");
+            form_cad.conf_senha_usuario.focus();
+            return false;
+        }
+        else{
+            alert("As senhas digitadas estão corretas!");
+        }
+
+        document.writeIn("Prezado(a) " +nome+ " seja bem vindo(a) ao nosso curso!")
+
+      }
+
+
+
     </script>
+
   </head>
   <body>
-    <h3>Aula de JavaScript</h3>
+
+        <h3>Aula de JavaScript</h3>
+        <!-- Criando uma estrutura de formuário na nossa página -->
+        
+        <!-- Utilizando o método get, as informações inseridas pelo usuário irão aparecer na URL
+        <form id="form_cad" method="get">
+        -->
+        <form id="form_cad" method="post">
+          <!-- Fieldset permite criar uma caixa envolvendo os campos -->
+          <fieldset>
+            <!-- Criar uma legenda -->
+            <legend>Preencha os campos abaixo para obter mais informações</legend><br>
+            <label>Nome:</label>
+            <input type="text" name="nome_usuario"><br><br>
+            <label>Email:</label>
+            <input type="text" name="email_usuario"><br><br>
+            <label>Senha:   </label>
+            <input type="password" name="senha_usuario"><br><br>
+            <label>Confirmar Senha:</label>
+            <input type="password" name="conf_senha_usuario"><br><br>
+            
+            <!-- Criando um botão para enviar nossos campos preenchidos -->
+            <input type="submit" onclick="return validacao()" value="Enviar"><br>
+            
+            <!-- Chamando um Script -->
+            <!--<input type="button" onclick="mensagem()" value="Não me CLIQUE"> -->
+
+            
+            
+          </fieldset>
+        </form>
+
   </body>
 </html>
